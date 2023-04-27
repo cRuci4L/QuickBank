@@ -5,7 +5,8 @@
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
-// @updateURL    https://raw.githubusercontent.com/cRuci4L/QuickBank/main/QuickBank.user.js
+// @updateURL    https://github.com/cRuci4L/QuickBank/raw/main/QuickBank.user.js
+// @downloadURL  https://github.com/cRuci4L/QuickBank/raw/main/QuickBank.user.js
 // @grant        none
 
 // ==/UserScript==
