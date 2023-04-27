@@ -1,22 +1,21 @@
 // ==UserScript==
 // @name         QuickBank
 // @namespace    cruci4l.quickbank
-// @version      0.1.1
+// @version      0.1.0
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
-// @updateURL    https://github.com/cRuci4L/QuickBank/blob/main/cruci4l.quickbank.js
-// @downloadURL  https://github.com/cRuci4L/QuickBank/blob/main/cruci4l.quickbank.js
+// @updateURL    https://raw.githubusercontent.com/cRuci4L/QuickBank/main/cruci4l.quickbank.js
 // @grant        GM_addStyle
 // @grant        GM_setValue
 // @grant        GM_getValue
 // ==/UserScript==
 
 //********SET YOUR TRADE ID HERE***********
-const myTradeID = '7852807'
+const myTradeID = ''
 
 //custom withdrawal amount in millions
-const customAmount = ["don't touch", "don't touch", 0.01, 0.05, 0.1, 0.2]
+const customAmount = ["don't touch", "don't touch", 2, 10, 50, 100]
 
 //*****************************************
 
