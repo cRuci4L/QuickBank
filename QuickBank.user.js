@@ -124,7 +124,7 @@ async function moneyStuffs(elem) {
 
 async function apiPull() {
     try {
-        const tradeRes = await fetch(`https://api.torn.com/user/?selections=log&log=4442,4443&key=${qb_apikey}`)
+        const tradeRes = await fetch(`https://api.torn.com/user/?selections=log&log=4442,4443&key=${qb_apikey}&comment=QuickBank`)
         const tradeJson = await tradeRes.json();
         let response = null
 
