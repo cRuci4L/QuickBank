@@ -5,10 +5,9 @@
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
-// @updateURL    https://raw.githubusercontent.com/cRuci4L/QuickBank/main/cruci4l.quickbank.js
-// @grant        GM_addStyle
-// @grant        GM_setValue
-// @grant        GM_getValue
+// @updateURL    https://raw.githubusercontent.com/cRuci4L/QuickBank/main/QuickBank.user.js
+// @grant        none
+
 // ==/UserScript==
 
 //********SET YOUR TRADE ID HERE***********
@@ -145,9 +144,4 @@ async function apiPull() {
 
 
 
-(function() {
-    'use strict';
 
-    // Your code here...
-    addButton();
-})();
