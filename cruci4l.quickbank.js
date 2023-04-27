@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         QuickBank
 // @namespace    cruci4l.quickbank
-// @version      0.1.0
+// @version      0.1.1
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
-// @updateURL    https://raw.githubusercontent.com/cRuci4L/QuickBank/master/cruci4l.quickbank.js
+// @updateURL    https://github.com/cRuci4L/QuickBank/blob/main/cruci4l.quickbank.js
+// @downloadURL  https://github.com/cRuci4L/QuickBank/blob/main/cruci4l.quickbank.js
 // @grant        GM_addStyle
 // @grant        GM_setValue
 // @grant        GM_getValue
