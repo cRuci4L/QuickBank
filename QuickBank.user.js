@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         QuickBank
 // @namespace    cruci4l.quickbank
-// @version      0.1.1
+// @version      0.1.2
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
@@ -49,7 +49,7 @@ buttonStyle.innerHTML = `
 `;
 
 //Add top button links on page load
-window.onload = function() {
+window.addEventListener('load', function() {
   const myDiv = document.querySelectorAll(".menu-item-link")
   const myList = ["Dump", "Get All", `${customAmount[2]}m`, `${customAmount[3]}m`, `${customAmount[4]}m`, `${customAmount[5]}m`]
   const myColors = ["#c96a31", "#48711e", "#48711e", "#48711e", "#48711e", "#48711e"]
@@ -64,7 +64,7 @@ window.onload = function() {
   document.getElementById("myButton3").addEventListener("click", () => moneyStuffs(3));
   document.getElementById("myButton4").addEventListener("click", () => moneyStuffs(4));
   document.getElementById("myButton5").addEventListener("click", () => moneyStuffs(5));
-};
+});
 
 var count = 0
 var handMoney = null
