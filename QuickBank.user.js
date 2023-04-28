@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         QuickBank
 // @namespace    cruci4l.quickbank
-// @version      0.1.0
+// @version      0.1.1
 // @description  A quick way to dump and pull your money for Torn City
 // @author       cRuci4L
 // @match        https://www.torn.com/*
@@ -48,31 +48,31 @@ buttonStyle.innerHTML = `
     }
 `;
 
+//Add top button links on page load
+window.onload = function() {
+  const myDiv = document.querySelectorAll(".menu-item-link")
+  const myList = ["Dump", "Get All", `${customAmount[2]}m`, `${customAmount[3]}m`, `${customAmount[4]}m`, `${customAmount[5]}m`]
+  const myColors = ["#c96a31", "#48711e", "#48711e", "#48711e", "#48711e", "#48711e"]
+  for (let i = 0; i < myDiv.length; i++) {
 
-const myDiv = document.getElementsByClassName("menu-item-link")
-const myList = ["Dump", "Get All", `${customAmount[2]}m`, `${customAmount[3]}m`, `${customAmount[4]}m`, `${customAmount[5]}m`]
-const myColors = ["#c96a31", "#48711e", "#48711e", "#48711e", "#48711e", "#48711e"]
+      myDiv[i].innerHTML = `<span style=" background-color: ${myColors[i]}; border-radius: 2px; border: none; margin: 0px 3px 0px 3px"><button id="myButton${[i]}" style="color: white; font-size: 12px; padding: 0px; margin: 0px 3px 0px 3px">${myList[i]}</button></span>`
+  }
+  // Add the event listeners here
+  document.getElementById("myButton0").addEventListener("click", () => moneyStuffs(0));
+  document.getElementById("myButton1").addEventListener("click", () => moneyStuffs(1));
+  document.getElementById("myButton2").addEventListener("click", () => moneyStuffs(2));
+  document.getElementById("myButton3").addEventListener("click", () => moneyStuffs(3));
+  document.getElementById("myButton4").addEventListener("click", () => moneyStuffs(4));
+  document.getElementById("myButton5").addEventListener("click", () => moneyStuffs(5));
+};
+
 var count = 0
 var handMoney = null
 var totalMoney = 0
 
 
-for (let i = 0; i < myDiv.length; i++) {
-
-    myDiv[i].innerHTML = `<span style=" background-color: ${myColors[i]}; border-radius: 2px; border: none; margin: 0px 3px 0px 3px"><button id="myButton${[i]}" style="color: white; font-size: 12px; padding: 0px; margin: 0px 3px 0px 3px">${myList[i]}</button></span>`
-}
-
 // Add the button:hover CSS to the head of the document
 document.head.appendChild(buttonStyle);
-
-
-document.getElementById("myButton0").addEventListener("click", () => moneyStuffs(0));
-document.getElementById("myButton1").addEventListener("click", () => moneyStuffs(1));
-document.getElementById("myButton2").addEventListener("click", () => moneyStuffs(2));
-document.getElementById("myButton3").addEventListener("click", () => moneyStuffs(3));
-document.getElementById("myButton4").addEventListener("click", () => moneyStuffs(4));
-document.getElementById("myButton5").addEventListener("click", () => moneyStuffs(5));
-
 
 async function moneyStuffs(elem) {
     handMoney = parseInt(document.getElementById('user-money').textContent.slice(1).replace(/,/g, ''));
